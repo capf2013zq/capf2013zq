@@ -1,0 +1,128 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg.jpg);
+  text-align: center;
+}
+
+#logo {
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+}
+
+#logo .img {
+  float: left;
+  width: 60px;
+  height: 60px;
+}
+
+#logo span {
+  font-size: 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.index {
+  color: white;
+}
+
+.intro span {
+  color: white;
+}
+
+.form-content span {
+  display: inline-block;
+}
+
+.form-content input {
+  display: inline-block;
+}
+
+.ulam-btn {
+  border-width: 0px;
+  margin-top: 0%;
+  padding: 0;
+  width:  39%;
+  /* border: 0px solid red; */
+}
+
+.ulam-btn1 {
+  border-width: 0px;
+  margin-top: 0%;
+  padding: 0;
+  /* border: 0px solid red; */
+  width:  60%;
+}
+
+.form-group label {
+  width: 30%;
+}
+
+.form-group input {
+  width: 60%;
+}
+
+.form-group button {
+  border-radius: 6px;
+  background-color: rgba(250, 167, 25, 0.9);
+  box-shadow: 0 1px 1px rgba(250, 167, 25, 0.9);
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  height: 37px;
+  padding: 5px;
+  margin-top: 1%;
+  margin-bottom: -1%;
+  width: 65.3%;
+  margin-right: -30.5%;
+}
+
+/* .form-group label:after {
+  content: "*";
+  color: red;
+} */
+
+.activity {}
+
+.btn-col {
+  background-color: #e15a2e;
+  border-color: #e15a2e;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.btn-col:hover {
+  color: #fff;
+}
+
+.fill {
+  height: 20px;
+  width: 100%;
+}
+
+.dialog-col {
+  background-image: url(../img/bg.jpg);
+}
+
+.modal-footer {
+  justify-content: center;
+  border-top-style: none;
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+}
+
+.gen_ulam_show{
+  background-color: #f75c52;
+}
+/*
+.sec {
+  color: #db5e5b;
+  width: 100%;
+  background-image: url(/assets/img/activity.jpg);
+  background-size: 100%;
+} */
+
+

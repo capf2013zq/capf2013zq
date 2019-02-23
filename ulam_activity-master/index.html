@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=450fc463b8" >
+    <link rel="stylesheet" href="assets/css/index.css?v=7ca86bac2d" >
+    <script src="assets/js/jquery.min.js?v=a09e13ee94"></script>
+    <script src="assets/js/bootstrap.min.js?v=14d449eb88"></script>
+    <script src="assets/js/clipboard.min.js?v=4bd392cb75"></script>
+    <script src="assets/js/app.js?v=19971e6aec"></script>
+    <script>document.write("<link href='index.css?time=" + new Date().getTime() + "' rel='stylesheet'>");</script>
+    <script>document.write('<scri' + 'pt src="js/index.js?v=f1a534046a?time=' + new Date().getTime() + '" type="text/javascript"></s' + 'cript>');;</script>
+
+    <title>Ulam</title>
+    <style>
+    #need dfn {display: none;}
+    #need li:hover dfn, #need li.hover dfn {display:inline;margin-left: 7px;color: #ffffff;}
+    .modal-content{border-radius: 20px;overflow: hidden;top:150px;}
+    .form-group label {width: 30%; }
+    .form-group button,.form-group input { width: 55%;}
+    </style>
+  </head>
+  <body>
+    <div class="container fix-container index">
+      <div id="logo">
+        <image class="img" src="assets/img/ulam.jpg"/>
+        <h1 style="text-align:center;">Ulam抵押挖矿</h1>
+      </div>
+      <div class="index-hero">
+        <div class="intro">
+          <image src="assets/img/intro.jpg" style="width: 100%;height:60%;"/>
+        </div>
+      </div>
+      <div id="register">
+        <!--<div style="font-size:50px;margin-top: 25px;margin-bottom: 25px;">快速注册</div>-->
+        <div class="form-content" style="margin-top: 30px;">
+            <div style="width: 50%;margin-left: 25%;" >
+                <p style=""><span style="font-weight: 700;color: #9ACD32;font-size:20px; ">提示:</span>选择登录方式:</p>
+                <p style="font-size:14px;font-weight: 700;color: #c6c8ca;">以太坊参与活动的用户只能参与推广不能参与挖矿！CoinBig参与活动的用户推广和挖矿均能参与！</p>
+            </div>
+            <div  class="radio" >
+
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><span id="n1">以太坊</span>
+                    </label>
+                    <label class="radio-inline" style="margin-left: 20px;">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><span id="n2">CoinBig</span>
+                    </label>
+            </div>
+          <div class="form-group" id="yitai" style="margin-top: 20px;">
+
+            <label for="eth_addr">以太坊地址:</label>
+            <input type="text" class="form-control" id="eth_addr" name="ethaddr" placeholder="以太坊地址作为最终奖励接收地址">
+          </div>
+          <div class="form-group" id="need" style="margin-top: 20px;">
+              <label for="ulamaddr">CoinBig：</label>
+              <input type="text" class="form-control" id="email" name="email" placeholder="CoinBig账号作为最终奖励接收账号">
+              <!--<p style="margin-left: 20%;text-align:center;"><span style="color: green;">提示!</span>CoinBig参与活动的用户推广和挖矿均能参与！</p>-->
+              <button  herf="https://www.coinbig.com/"   onclick="window.open('https://www.coinbig.com/userreg.html')" style="margin-top: 10px;">点击注册CoinBig</button>
+          </div>
+
+
+          <div class="form-group" id="need" style="margin-top:30px;">
+            <li style="list-style-type:none;"><label for="ulamaddr" id="need">Ulam地址:</label>
+            <input type="text" class="form-control" id="ulam_addr" name="ulamaddr"  placeholder="请填写正确的Ulam地址">
+            <button id="gen_ulam"  style="margin-top: 20px;">点击生成Ulam地址</button>
+              <!--
+              <dfn >（Ulam网站：<a href="http://ulamchain.io" target="_blank" class="link">http://ulamchain.io</a> 获取Ulam地址的详细介绍：<a href="https://mp.weixin.qq.com/s/gaNZ1DAkQnX6K-Sjpk5VHQ" target="_blank" class="link">https://mp.weixin.qq.com/s/gaNZ1DAkQnX6K-Sjpk5VHQ</a>）</dfn></li>
+              -->
+
+            </a>
+          </div>
+
+
+
+          <div class="form-group" style="margin-bottom: 30px;margin-top:30px;">
+            <label for="invitation">邀请码</label>
+            <input type="text" class="form-control" id="expand_num" name="invitation" readonly placeholder="请填写正确的邀请码">
+          </div>
+
+          <button type="button" class="ulam-btn" data-toggle="modal" >
+          <img src="assets/img/register.jpg" width="100%"  alt="注册" id="reg_btn"/>
+          </button>
+
+          <div class="fill"></div>
+
+          <button type="button" class="ulam-btn1" data-toggle="modal" data-target="#alertJoin">
+          <img src="assets/img/join.jpg" width="100%"  alt="加入"/>
+          </button>
+
+          <!-- alertModal -->
+          <div class="modal fade" id="alertModal" tabindex="-2" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header" style="border-bottom-style: none">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" style="color: #db5e5b; font-weight: 5;">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <img src="assets/img/gift.jpg" width="200px" height="145px" alt="gift"/>
+                  <span style="color: #e15a2e; display: block; font-size: 20px">恭喜注册成功，可以分享</span>
+                  <span style="color: #e15a2e; display: block; font-size: 15px">邮件发送成功，请去邮箱确认</span>
+                  <span style="color: gray; font-size: 13px; display: block;">注册分享，与好友一起收益，一起获利</span>
+                </div>
+
+                <!-- Hidden area -->
+                <input type="text" id="copyat" style="left: -1000000px; opacity: 0;"/>
+                <!-- Hidden area -->
+
+                <div class="modal-footer">
+                  <button class="btn btn-col _copy_btn_" id="shard_link" data-clipboard-target="#copyat" style="width: 60%;">复制链接并生成海报</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- alertModal -->
+
+          <!-- modal -->
+          <div class="modal fade" id="alertJoin"  tabindex="-2" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header dialog-col" style="border-bottom-style: none">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" style="color: #fff">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body dialog-col">
+                  <a href="https://0.plus/joinchat/K8sHRxTA-sJM-MiHsTqeIA" target="_blank" class="link">
+                  <img src="assets/img/biyong.jpg" width="85%" height="100px" alt="加入币用"/>
+                  </a>
+                  <div class="fill"></div>
+                  <a href="https://t.me/joinchat/K8sHRxTA-sJM-MiHsTqeIA" target="_blank" class="link">
+                  <img src="assets/img/telegram.jpg" width="85%" height="100px" alt="加入Telegram"/>
+                  </a>
+                </div>
+
+                <div class="modal-footer dialog-col"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- modal -->
+
+          <!-- gen_ulam_alert -->
+          <div class="modal fade" id="gen_ulam_alert" tabindex="-2" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <div class="modal-header dialog-col" style="border-bottom-style: none">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" style="color: #fff">&times;</span>
+                  </button>
+                </div>
+
+                <div class="gen_ulam_show">
+
+                    <label for="priv-key-gens">生成地址</label>
+                    <label for="priv-key-gens">私钥：</label>
+                    <input type="text" class="form-control" readonly="readonly" id="priv-key-gens" placeholder="">
+                    <label for="addr-gen">地址：</label>
+                    <input type="text" class="form-control" readonly="readonly" id="addr-gen" placeholder="">
+
+                <div>
+
+                <div class="modal-footer dialog-col"></div>
+              </div>
+            </div>
+          </div>
+          <!-- gen_ulam_alert -->
+
+        </div>
+      </div>
+      <div class="activity">
+        <div class="fill"></div>
+        <span style="font-size: 50px;">活动说明</span>
+        <div class="fill"></div>
+        <img src="assets/img/bei1.png" width="100%"/>
+      </div>
+
+    </div>
+    <script src="assets/js/index.js?v=f1a534046a"></script>
+  </body>
+
+  <footer id="footer">
+    <div class="fill"></div>
+  </footer>
+</html>
